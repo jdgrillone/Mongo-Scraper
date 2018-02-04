@@ -4,7 +4,6 @@ body { background-color: rgb(255, 255, 255) }
         width: 960px;
         margin-left: auto;
         margin-right: auto;
-        padding-top: 5%;
       }
 
 #articles {
@@ -43,11 +42,12 @@ textarea {
 }
 
 .heading-card {
-    background-color: rgb(151, 151, 199);
+    background-color: rgb(153, 153, 153);
     border-radius: 5px;
     width: 70%;
     text-align: center;
     padding: 5px;
+    margin: auto;
 }
 
 h5 {
