@@ -24,7 +24,7 @@ $(document).on("click", ".article-click", function () {
         .then(function (data) {
             console.log(data);
             // The title of the article
-            $("#notes").append("<h5>" + data.title + "</h5>");
+            $("#notes").append("<h5>" + data.title + "</h5><br>");
             // Create a div for notes to go into
             $("#notes").append("<div id='notes-list'></div>");
             // An input to enter a new title
@@ -36,6 +36,7 @@ $(document).on("click", ".article-click", function () {
 
             // If there's a note in the article
             if (data.note) {
+                console.log(data.note);
                 $("#notes-list").append("<h6>" + data.note.title + "</h6> <p>" + data.note.body + "</p>")
                 // Place the title of the note in the title input
                 // $("#titleinput").val(data.note.title);
