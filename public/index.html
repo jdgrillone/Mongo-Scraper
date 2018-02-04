@@ -3,15 +3,35 @@
 
 <head>
     <title>Mongoose Scraper</title>
+    <!-- Link to Materialize CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <!-- Link to Local CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
     <div id="wrapper">
-        <h1>Mongo Scraper</h1>
-        <!-- div for all articles -->
-        <div id="articles"></div>
-        <!-- div for all notes -->
-        <div id="notes"></div>
+        <div id="title">
+            <h1>Mongo Scraper</h1>
+        </div>
+        <div class="row">
+        <div class="col s8">
+            <!-- div for all articles -->
+            <h2 class="heading-card">Articles</h2>
+            <div id="articles">
+
+            </div>
+        </div>
+        <div class="col s4">
+            <div id="notes-section">
+                <h2 class="heading-card">Notes</h2>
+                <!-- div for all notes -->
+                <div id="notes">
+
+                </div>
+            </div>
+        </div>
+        </div>
     </div>
     <!-- Jquery CDN Link -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
