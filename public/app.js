@@ -38,7 +38,8 @@ $(document).on("click", ".article-click", function () {
             if (data.note) {
                 console.log(data.note);
                 for (i = 0; i > data.note; i++) {
-                    $("#notes").append("<h6>" + data.note.title + "</h6> <p>" + data.note.body + "</p>");
+                    console.log("A");
+                    $("#notes").append("<h6>" + data.note.title[i] + "</h6> <p>" + data.note.body[i] + "</p>");
                 }
                 // Place the title of the note in the title input
                 // $("#titleinput").val(data.note.title);
