@@ -7,7 +7,7 @@ var cheerio = require("cheerio");
 
 // Initialize Express
 var db = require("./models");
-var PORT = 3000;
+var port = process.env.PORT || 3000;
 var app = express();
 
 //Use body-parser for handling form submissions
@@ -101,6 +101,6 @@ app.post("/articles/:id", function (req, res) {
 });
 
 // Start the server
-app.listen(PORT, function () {
-    console.log("App running on port " + PORT + "!");
+app.listen(port, function () {
+    console.log("App running on port " + port + "!");
 });
