@@ -37,7 +37,9 @@ $(document).on("click", ".article-click", function () {
             // If there's a note in the article
             if (data.note) {
                 console.log(data.note);
-                $("#notes-list").append("<h6>" + data.note.title + "</h6> <p>" + data.note.body + "</p>")
+                for (i = 0; i > data.note; i++) {
+                    $("#notes").append("<h6>" + data.note.title + "</h6> <p>" + data.note.body + "</p>");
+                }
                 // Place the title of the note in the title input
                 // $("#titleinput").val(data.note.title);
                 // Place the body of the note in the body textarea

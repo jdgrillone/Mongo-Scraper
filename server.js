@@ -92,7 +92,7 @@ app.get("/articles/:id", function (req, res) {
 // Route for saving/updating an Article's associated Note
 app.post("/articles/:id", function (req, res) {
     db.Note.create(req.body).then(function (dbNote) {
-        return db.Article.findOneAndUpdate({ _id: req.params.id }, { $set: { note: dbNote._id } }, { new: true });
+        return db.Article.findOneAndUpdate({ _id: req.params.id }, { $push: { note: dbNote._id } }, { new: true });
     }).then(function (dbArticle) {
         res.json(dbArticle);
     }).catch(function (err) {
