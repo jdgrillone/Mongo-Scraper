@@ -22,7 +22,6 @@ $(document).on("click", ".article-click", function () {
     })
         // With that done, add the note information to the page
         .then(function (data) {
-            console.log(data);
             // The title of the article
             $("#notes").append("<h5>" + data.title + "</h5><br>");
             // Create a div for notes to go into
@@ -36,15 +35,9 @@ $(document).on("click", ".article-click", function () {
 
             // If there's a note in the article
             if (data.note) {
-                console.log(data.note);
-                for (i = 0; i > data.note; i++) {
-                    console.log("A");
-                    $("#notes").append("<h6>" + data.note.title[i] + "</h6> <p>" + data.note.body[i] + "</p>");
+                for (var i = 0; i < data.note.length; i++) {
+                    $("#notes").append("<h6><strong>" + data.note[i].title + "</strong></h6> <p>" + data.note[i].body + "</p>");
                 }
-                // Place the title of the note in the title input
-                // $("#titleinput").val(data.note.title);
-                // Place the body of the note in the body textarea
-                // $("#bodyinput").val(data.note.body);
             }
         });
 });
@@ -67,8 +60,6 @@ $(document).on("click", "#savenote", function () {
     })
         // With that done
         .then(function (data) {
-            // Log the response
-            console.log(data);
             // Empty the notes section
             $("#notes").empty();
         });
