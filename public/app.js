@@ -3,7 +3,7 @@ $.getJSON("/articles", function (data) {
     // For each one
     for (var i = 0; i < data.length; i++) {
         // Display the apropos information on the page
-        $("#articles").append("<div class='article-click' data-id='" + data[i]._id + "'>" + "<h5>" + data[i].title + "</h5>" + "<a href=" + data[i].link + ">" + data[i].link + "</a> </div><br>");
+        $("#articles").append("<div class='article-click' data-id='" + data[i]._id + "'>" + "<h5>" + data[i].title + "</h5>" + "<a href=" + data[i].link + " target='_blank'>" + data[i].link + "</a> </div><br>");
     }
 });
 
@@ -32,6 +32,7 @@ $(document).on("click", ".article-click", function () {
             $("#notes").append("<textarea id='bodyinput' placeholder='Comment Body' name='body'></textarea>");
             // A button to submit a new note, with the id of the article saved to it
             $("#notes").append("<button data-id='" + data._id + "' id='savenote'>Save Note</button>");
+            $("#notes").append("<h5><u>Comments</u></h5>")
 
             // If there's a note in the article
             if (data.note) {
