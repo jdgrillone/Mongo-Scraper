@@ -65,7 +65,7 @@ app.get("/scrape", function (req, res) {
                 }
             });
         });
-        // If we were able to successfully scrape and save an Article, send a message to the client
+        // If we were able to successfully scrape and save an Article, reload root route.
         res.redirect("/");
     });
 });
